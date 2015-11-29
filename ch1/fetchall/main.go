@@ -17,6 +17,7 @@ func main() {
 		if !strings.HasPrefix(url, "http://") {
 			url = "http://" + url
 		}
+		fmt.Printf("Fetching %s...\n", url)
 		go fetch(url, ch)
 	}
 	for range os.Args[1:] {
@@ -26,7 +27,6 @@ func main() {
 }
 
 func fetch(url string, ch chan<- string) {
-	ch <- fmt.Sprintf("Fetching %s...", url)
 	start := time.Now()
 	resp, err := http.Get(url)
 	if err != nil {
