@@ -26,6 +26,7 @@ func main() {
 }
 
 func fetch(url string, ch chan<- string) {
+	ch <- fmt.Sprintf("Fetching %s...", url)
 	start := time.Now()
 	resp, err := http.Get(url)
 	if err != nil {
