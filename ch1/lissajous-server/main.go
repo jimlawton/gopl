@@ -17,11 +17,11 @@ import (
 const (
 	bgIndex = 0     // background color palette index
 	fgIndex = 1     // foreground color palette index
-	cycles  = 5     // number of complete x oscillator revolutions
-	res     = 0.001 // angular resolution
-	size    = 100   // image canvas covers [-size..+size]
-	nFrames = 64    // number of animation frames
-	delay   = 8     // delay between frames in 10ms units
+	cycles  = 5     // default number of complete x oscillator revolutions
+	res     = 0.001 // default angular resolution
+	size    = 250   // default image canvas covers [-size..+size]
+	nFrames = 64    // default number of animation frames
+	delay   = 8     // default delay between frames in 10ms units
 )
 
 func main() {
